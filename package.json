@@ -1,0 +1,30 @@
+{
+  "name": "medaltv-wrapper",
+  "version": "1.0.0",
+  "description": "A simple Node.js wrapper for the Medal.tv Rest API",
+  "main": "index.js",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awexxx/medaltv-wrapper.git"
+  },
+  "keywords": [
+    "medal",
+    "medaltv",
+    "wrapper",
+    "javascript",
+    "api"
+  ],
+  "author": "Awex",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/awexxx/medaltv-wrapper/issues"
+  },
+  "homepage": "https://github.com/awexxx/medaltv-wrapper#readme"
+}
