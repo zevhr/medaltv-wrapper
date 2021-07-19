@@ -33,7 +33,8 @@ async function searchForClip() {
 await mtv.searchClips({
     apikey: '',
     keyword: 'your search term',
-    limit: 'how many clips you want returned (up to 1000, default is 10)'
+    limit: 'how many clips you want returned (up to 1000, default is 10)',
+    offset: 'how many objects to skip'
     })
 }
 ```
@@ -48,7 +49,8 @@ async function getNewestClip() {
     await mtv.newestClips({
         apikey: '',
         uid: 'the users id (NOT THEIR USERNAME), see above.',
-        limit: 'how many clip objects you want returned.' 
+        limit: 'how many clip objects you want returned.',
+        offset: 'how many objects to skip'
     })
 }
 ```
@@ -60,7 +62,8 @@ const mtv = require('medaltv-wrapper')
 async function getTrendingClip() {
     await mtv.trendingClips({
         apikey: '',
-        limit: '1'
+        limit: '1',
+        offset: 'how many objects to skip'
     })
 }
 ```

@@ -10,8 +10,9 @@ async function searchClips(options) {
     const key = options.apikey
     const word = options.keyword
     const limit = options.limit
+    const offset = options.offset
 
-    var api = `https://developers.medal.tv/v1/search?text=${word}&limit=${limit}`
+    var api = `https://developers.medal.tv/v1/search?text=${word}&limit=${limit}&offset=${offset}`
 
     const data = await fetch(api, {
         method: 'GET',
@@ -42,8 +43,9 @@ async function newestClips(options) {
     const key = options.apikey
     const user = options.uid
     const limit = options.limit
+    const offset = options.offset
 
-    var api = `https://developers.medal.tv/v1/latest?userId=${user}&limit=${limit}`
+    var api = `https://developers.medal.tv/v1/latest?userId=${user}&limit=${limit}&offset=${offset}`
 
     const { contentObjects } = await fetch(api, {
         method: 'GET',
@@ -69,8 +71,9 @@ async function newestClips(options) {
 async function trendingClips(options) {
     const key = options.apikey
     const limit = options.limit
+    const offset = options.offset
 
-    var api = `https://developers.medal.tv/v1/trending?limit=${limit}`
+    var api = `https://developers.medal.tv/v1/trending?limit=${limit}&offset=${offset}`
 
     const { contentObjects } = await fetch(api, {
         method: 'GET',
