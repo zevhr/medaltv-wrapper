@@ -1,9 +1,10 @@
 {
   "name": "medaltv-wrapper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple Node.js wrapper for the Medal.tv Rest API",
   "main": "index.js",
   "dependencies": {
+    "chalk": "^4.1.1",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {},
