@@ -238,7 +238,8 @@ async function searchClips(options) {
 
     if (limit === `` && offset != `` || limit === undefined) {
         console.log(`Using default value for limit.`)
-        var nolimit = `https://developers.medal.tv/v1/search?limit=10&offset=${offset}&text=${word}`
+        var nolimit = `https://developers.medal.tv/v1/search?limit=10&offset=${offset}&text=${word}`.replace('#', '%23')
+        console.log(nolimit)
         
         const { contentObjects } = await fetch(nolimit, {
             method: 'GET',
@@ -261,7 +262,7 @@ async function searchClips(options) {
         module.exports.iframe = base.embedIframeCode // HTML IFrame embeddable video code
     } else if (limit != `` && offset === `` || offset === undefined) {
         console.log(`Using default value for offset.`)
-        var nooffset = `https://developers.medal.tv/v1/search?limit=${limit}&text=${word}`
+        var nooffset = `https://developers.medal.tv/v1/search?limit=${limit}&text=${word}`.replace('#', '%23')
         
         const { contentObjects } = await fetch(nooffset, {
             method: 'GET',
@@ -306,7 +307,7 @@ async function searchClips(options) {
         module.exports.credits = base.credits // Credits the user
         module.exports.iframe = base.embedIframeCode // HTML IFrame embeddable video code
     } else {
-        var api = `https://developers.medal.tv/v1/search?text=${word}&limit=${limit}&offset=${offset}`
+        var api = `https://developers.medal.tv/v1/search?text=${word}&limit=${limit}&offset=${offset}`.replace('#', '%23')
 
         const data = await fetch(api, {
             method: 'GET',
