@@ -10,7 +10,7 @@ const chalk = require('chalk');
 async function genPublicKey() {
     var data = await fetch(`https://developers.medal.tv/v1/generate_public_key`).then(response => response.text())
     let token = data.substr(30)
-    console.log(token)
+    console.log(`New Medal API Token generated:` + token)
 }
 
 // Get trending clips, either via category or just offset/limit! 
@@ -25,7 +25,6 @@ async function trendingClips(options) {
     }
 
     var url = `https://developers.medal.tv/v1/trending?categoryId=${category}&limit=${limit}&offset=${offset}`
-    console.log(url)
 
     const data = await fetch(url, {
         method: 'GET',
@@ -65,7 +64,15 @@ async function searchClips(options) {
     if(key === '' || key === undefined) {
         return console.log(chalk.redBright.bold(`Sorry, but you need a Medal.tv API key!\nUse built-in function or get one from their Developer Docs (https://docs.medal.tv/api)`))
     } else {
-        var url = `https://developers.medal.tv/v1/search?text=${word}&limit=${limit}&offset=${offset}`.replace('#', '%23')
+        if (word.includes('#')) {
+            var newWord = word.replace('#', '%23')
+        } else if (word.includes(' ')) {
+            var newWord = word.replace(' ', '%20')
+        } else {
+            var newWord = word
+        }
+
+        var url = `https://developers.medal.tv/v1/search?text=${newWord}&limit=${limit}&offset=${offset}`
         const data = await fetch (url, {
             method: 'GET',
             headers: { 'Authorization': `${key}` }
