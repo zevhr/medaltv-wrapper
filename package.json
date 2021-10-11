@@ -1,13 +1,12 @@
 {
   "name": "medaltv-wrapper",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A simple Node.js wrapper for the Medal.tv Rest API",
-  "main": "index-new.js",
+  "main": "index.js",
   "dependencies": {
-    "chalk": "^4.1.1",
-    "node-fetch": "^2.6.1"
+    "axios": "^0.22.0",
+    "chalk": "^4.1.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

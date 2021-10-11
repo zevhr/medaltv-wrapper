@@ -31,7 +31,8 @@ await mtv.searchClips({
     apikey: '',
     keyword: 'your search term',
     limit: 'how many clips you want returned (up to 1000, default is 1)',
-    offset: 'how many objects to skip (default is 0)'
+    offset: 'how many objects to skip (default is 0)',
+    random: boolean (if you want a random clip to be returned)
     })
 
     console.log(mtv.data)
