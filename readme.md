@@ -51,7 +51,8 @@ async function getNewestClip() {
         uid: 'the users id (NOT THEIR USERNAME), see above.',
         limit: 'how many clips you want returned (up to 1000, default is 1)',
         offset: 'how many objects to skip (default is 0)',
-        categoryId: 'game you want to sift through. see Notices below for more info! (default is none)'
+        categoryId: 'game you want to sift through. see Notices below for more info! (default is none)',
+        random: boolean (if you want a random clip to be returned)
     })
 }
 ```

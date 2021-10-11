@@ -44,15 +44,18 @@ async function latestClip(options) {
 
     if(key === '' || key === undefined) {
         return console.log(chalk.redBright.bold(`Sorry, but you need a Medal.tv API key!\nUse built-in function or get one from their Developer Docs (https://docs.medal.tv/api)`))
-    } else {
-        var url = `https://developers.medal.tv/v1/latest?userId=${uid}&categoryId=${category}&limit=${limit}&offset=${offset}`
+    } else if (options.random === true) {
+        var max = 500
+        var num = Math.floor(Math.random() * max) + 1;
+        var url = `https://developers.medal.tv/v1/latest?categoryId=${category}&userId=${uid}&limit=${limit}&offset=${num}`.replace('#', '%23').replace(' ', '%20')
+    } else url = `https://developers.medal.tv/v1/latest?categoryId=${category}&userId=${uid}&limit=${limit}&offset=${offset}`.replace('#', '%23').replace(' ', '%20')
+
         const data = await axios.get(url, {
             method: 'GET',
             headers: { 'Authorization': `${key}` }
         })
         return module.exports.data = data.data.contentObjects[0]
     }
-}
 
 // Search for clips using the provided keyword!
 async function searchClips(options) {
