@@ -38,7 +38,7 @@ latestClips({
     limit: '1',
     offset: '0',
     categoryId: 'fortnite',
-    userId: '215577'
+    username: 'fello'
 })
 .then(clip => console.log(clip))
 ```
