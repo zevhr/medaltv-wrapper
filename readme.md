@@ -66,3 +66,14 @@ fetchCategories({
 })
 .then(category => console.log(category))
 ```
+
+#### fetchUser - Fetch a usernames Medal UID
+```
+const { fetchUser } = require('medaltv-wrapper');
+
+fetchUser({
+    apikey: `pub_xxxxxxxxxxxxxxxxxxxx`,
+    username: 'fello'
+})
+.then(user => console.log(user))
+```
