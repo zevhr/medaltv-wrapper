@@ -14,7 +14,9 @@ npm i medaltv-wrapper
 ### How do I use this?
 It's simple! Call a function, supply a couple parameters, bam! You're done!  
 You can see below for all the functions. It's expected you know how to work JSON data and basic Javascript.  
-You will also need a [Medal API Key](https://docs.medal.tv/api#generate-an-api-key) in order to utilize this. Use a public one if this is a public app and visa versa.
+You will also need a [Medal API Key](https://docs.medal.tv/api#generate-an-api-key) in order to utilize this. Use a public one if this is a public app and visa versa.  
+  
+If you're looking for a vanilla javascript version of this, please see the [VJS branch](https://github.com/awexxx/medaltv-wrapper/tree/vjs).
   
 #### searchClips - Search via a keyword
 ```
