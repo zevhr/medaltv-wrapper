@@ -1,4 +1,6 @@
-![MJS](/img/medaljs.png)
+<p align="center">
+  <img src="https://github.com/awexxx/medaltv-wrapper/blob/vjs/img/medaljs.png?raw=true" />
+</p>
 
 ## Medal.tv Javascript API Wrapper
 This wrapper utilizes [Medal.tv's Developer API](https://docs.medal.tv) to return clips to your website!
