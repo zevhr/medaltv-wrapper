@@ -1,3 +1,5 @@
+![MJS](/img/medaljs.png)
+
 ## Medal.tv Javascript API Wrapper
 This wrapper utilizes [Medal.tv's Developer API](https://docs.medal.tv) to return clips to your website!
 
