@@ -40,7 +40,7 @@ latestClips({
     limit: '1',
     offset: '0',
     categoryId: 'fortnite',
-    username: 'fello'
+    userid: '215577'
 })
 .then(clip => console.log(clip))
 ```
@@ -70,12 +70,8 @@ fetchCategories({
 ```
 
 #### fetchUser - Fetch a usernames Medal UID
-```
-const { fetchUser } = require('medaltv-wrapper');
-
-fetchUser({
-    apikey: `pub_xxxxxxxxxxxxxxxxxxxx`,
-    username: 'fello'
-})
-.then(user => console.log(user))
-```
+This function was **deprecated** due to Medal changing user URL structures.  
+To get your category ID, follow these steps:
+- Open Medal on the web and navigate to the profile you're using.
+- Click the 3 dots on the clip modal and select **Download..**
+- The url should look like `https://cdn.medal.tv/[id]/[quality]-xxxxxxxxx.mp4`. You'll want the string of numbers in the middle.

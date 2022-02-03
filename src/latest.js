@@ -7,14 +7,14 @@ module.exports = async (options) => {
     var key = options.apikey
     var limit = options.limit || '1'
     var offset = options.offset || '0'
-    var uid = options.username || 'none'
+    var uid = options.uid || 'none'
 
     if(!options.apikey) {
         throw new Error(`No API key was supplied, please read the docs.`)
     }
 
-    if(options.username) var uid = await getUsr({ username: options.username, apikey: key })
-    else var uid = 'none'
+    // if(options.username) var uid = await getUsr({ username: options.username, apikey: key })
+    // else var uid = 'none'
 
     if(options.categoryId) var category = await getCat({ categoryId: options.categoryId, apikey: key });
     else var category = `none`; 
