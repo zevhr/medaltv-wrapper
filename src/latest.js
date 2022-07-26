@@ -1,7 +1,6 @@
 const axios = require('axios');
 
 const getCat = require('./category');
-const getUsr = require('./user');
 
 module.exports = async (options) => {
     var key = options.apikey
